@@ -10,12 +10,18 @@ body {
   color: #fff;
 }
 
+.container {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   background-color: #252d2c;
-  padding: 0.8em;
-  font-size: 1.5em;
+  padding: 0.5em;
+  font-size: 1em;
 }
 
 .navbar .wallet {
@@ -24,13 +30,13 @@ body {
 
 .navbar .history {
   margin-left: auto;
-  font-size: 1.2em;
+  font-size: 1em;
   color: rgb(128, 150, 160);
 }
 
 .balance {
   margin: 1em;
-  padding: 1.5em;
+  padding: 1em;
   background-color: #252d2c;
   border-radius: 0.5em;
 }
@@ -48,19 +54,15 @@ body {
 
 .balance .currency {
   float: right;
-  margin-right: 1.5em;
-}
-
-.balance .currency {
-  float: right;
-  margin-right: 1.5em;
+  margin-right: 1em;
 }
 
 .balance .total {
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-weight: 500;
 }
 .balance .refresh {
+  font-size: 0.8em;
   margin-top: 0.8em;
   color: rgb(128, 150, 160);
 }
@@ -69,8 +71,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  margin-top: 2.5em;
-  padding: 1em;
+  margin-top: 2em;
+  padding: 0.8em;
   border-radius: 0.5em;
   background-color: #131616;
 }
@@ -88,10 +90,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.8em;
   margin-left: 0.8em;
-  margin-bottom: 0.8em;
-  padding: 1.2em;
+  padding: 0.8em;
   color: rgb(128, 150, 160);
 }
 
@@ -110,30 +110,36 @@ body {
 }
 
 .assets {
-  margin: 0.8em;
-  padding: 1.2em;
+  font-size: 0.8em;
+  margin: 0.5em;
+  padding: 0.5em;
   background-color: #252d2c;
   border-radius: 0.5em;
 }
 
 .asset .up {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  grid-template-columns: 3em 50% 45%;
+  margin: 0.2em;
 }
+
+.asset .up .icon {
+  flex-grow: 0.5;
+}
+.asset .up .symbol {
+  flex-grow: 10;
+}
+.asset .up .transaction {
+  flex-grow: 0;
+}
+
 .asset .down {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
-  margin-top: 1em;
-  margin-left: 3em;
+  gap: 0.3em;
+  margin-left: 4em;
   color: rgb(128, 150, 160);
-}
-
-.assets .asset .transaction {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1em;
 }
 
 .assets .asset .transaction button {
@@ -170,7 +176,7 @@ body {
   width: 100%;
   position: fixed;
   bottom: 0;
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   justify-content: space-around;
 }
